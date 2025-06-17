@@ -17,6 +17,10 @@
 
 package global
 
+const (
+	MaxWheelTimeSpan = 900e9 // 900s, 15 minute
+)
+
 type ConsumerConfig struct {
 	Filter          string   `yaml:"filter" json:"filter,omitempty" property:"filter"`
 	RegistryIDs     []string `yaml:"registry-ids" json:"registry-ids,omitempty" property:"registry-ids"`

@@ -63,6 +63,10 @@ func initServer(url *common.URL) {
 		return
 	}
 
+	rootConfig := config.GetRootConfig()
+
+	logger.Infof("get root config: %v", rootConfig)
+
 	protocolConf := config.GetRootConfig().Protocols[url.Protocol]
 	if protocolConf == nil {
 		logger.Debug("use default getty server config")
